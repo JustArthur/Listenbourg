@@ -1,0 +1,110 @@
+/*! Importation de la font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/** Initialise la pages */
+*, ::before, ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Poppins';
+    user-select: none;
+}
+
+:root {
+    --body-color: #ffffff;
+    --text-color: #1d1d1d;
+}
+
+.body-black {
+    --body-color: #1d1d1d;
+    --text-color: #ffffff;
+}
+
+/** Partie gauche de la page produit (Image et titre) (enfaite j'ai inversé la droite et la gauche lol)*/
+.produit-right {
+    display: flex;
+    flex-direction: column;
+    width: 90vw;
+    margin-top: 90px;
+    margin-left: 30px;
+    font-size: 50px;
+    font-weight: 900;
+}
+
+/** Grande image */
+img {
+    border-radius: 20px;
+}
+
+/** Partie droite (Catégorie, Description) */
+.produit-left {
+    position: absolute;
+    left: 800px;
+    top: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/** Description du produit */
+.produit-left .desc{
+    width: 50vw;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+/** Catégorie du produit */
+.produit-left .categorie {
+    font-size: 20px;
+    font-weight: 200;
+    color: #6161ff;
+}
+
+
+/*************************************/
+/**          Couleur Body           **/
+/*************************************/
+body {
+    color: var(--text-color);
+    background-color: var(--body-color);
+}
+
+/** Bouton pour changer le thème */
+.change {
+    position: absolute;
+    right: 30px;
+    top: 20px;
+    background-color: #6161ff;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-weight: 500;
+}
+
+/** Bouton retour */
+a.back {
+    position: absolute;
+    left: 30px;
+    top: 20px;
+    background-color: red;
+    padding: 20px;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+/** Si jamais une image est trop grande en hauteur j'en défini une maximum pour éviter un scroll */
+.produit-right img {
+    max-height: 720px;
+    object-fit: cover;
+}
+
+audio {
+    position: absolute;
+    right: 250px;
+    top: 20px;
+}
